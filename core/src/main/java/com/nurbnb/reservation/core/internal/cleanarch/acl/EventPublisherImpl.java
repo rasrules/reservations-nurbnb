@@ -1,8 +1,6 @@
 package com.nurbnb.reservation.core.internal.cleanarch.acl;
 
 import com.nurbnb.reservation.core.internal.cleanarch.domain.reservations.ReservationOpened;
-import com.nurbnb.reservation.core.internal.cleanarch.domain.reservations.FundsDeposited;
-import com.nurbnb.reservation.core.internal.cleanarch.domain.reservations.FundsWithdrawn;
 import com.nurbnb.reservation.core.internal.cleanarch.domain.common.events.DomainEvent;
 import com.nurbnb.reservation.core.internal.cleanarch.domain.common.events.EventPublisher;
 import com.nurbnb.reservation.core.ports.driven.EventBus;
@@ -28,12 +26,6 @@ public class EventPublisherImpl implements EventPublisher {
         if(event instanceof ReservationOpened)
         {
             return ReservationOpenedConverter.fromEvent((ReservationOpened) event);
-        }
-        else if(event instanceof FundsDeposited) {
-            return FundsDepositedConverter.fromEvent((FundsDeposited) event);
-        }
-        else if(event instanceof FundsWithdrawn) {
-            return FundsWithdrawnConverter.fromEvent((FundsWithdrawn) event);
         }
 
         throw new IllegalArgumentException("Unrecognized event type");
