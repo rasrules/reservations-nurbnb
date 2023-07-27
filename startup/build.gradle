@@ -1,0 +1,15 @@
+dependencies {
+    implementation project(':core')
+
+    implementation project(':adapter-time-system')
+    // implementation project(':adapter-generation-random')
+    implementation project(':adapter-restapi-spring')
+}
+
+bootJar {
+    enabled = true
+}
+
+jar {
+    enabled = true
+}

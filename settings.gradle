@@ -1,0 +1,10 @@
+rootProject.name = 'reservations'
+include 'core'
+// include 'test-fixtures'
+include 'startup'
+
+include 'adapter-base'
+// include 'adapter-persistence-jpa'
+include 'adapter-time-system'
+
+include 'adapter-restapi-spring'
