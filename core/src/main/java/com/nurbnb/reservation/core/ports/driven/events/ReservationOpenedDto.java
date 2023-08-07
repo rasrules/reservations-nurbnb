@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @Builder
 public class ReservationOpenedDto implements EventDto {
     private LocalDateTime timestamp;
-    private long accountId;
+    private long reservationId;
     private String firstName;
     private String lastName;
     private int balance;

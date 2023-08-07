@@ -8,7 +8,7 @@ public class ReservationOpenedConverter {
     public static ReservationOpenedDto fromEvent(ReservationOpened event) {
         return ReservationOpenedDto.builder()
                 .timestamp(event.getTimestamp())
-                .accountId(event.getReservationId().toLong())
+                .reservationId(event.getReservationId().toLong())
                 .firstName(event.getReservationHolderName().firstName().toString())
                 .lastName(event.getReservationHolderName().lastName().toString())
                 .build();

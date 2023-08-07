@@ -19,8 +19,17 @@ services:
     image: reservations-app-image
     build:
       context: .
+    links:
+      - postgres    
     volumes:
       - ./:/usr/src/myapp
+    environment:
+      - POSTGRES_URL=${POSTGRES_URL}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    ports:
+      - '0.0.0.0:8080:8080'
+
   # mongodb:
   #   image: mongo:6.0.3
   #   container_name: mongodb

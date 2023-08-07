@@ -14,9 +14,9 @@ import java.time.LocalDate;
 public class ReservationDto {
     private long reservationId;
     private String reservationNumber;
-    private String nationalIdentityNumber;
-    private String firstName;
-    private String lastName;
-    private LocalDate openingDate;
-    private int balance;
+    private LocalDate createdAt;
+	private LocalDate startDate;
+	private LocalDate endDate;
+    private String status;
+    private String paymentType;
 }

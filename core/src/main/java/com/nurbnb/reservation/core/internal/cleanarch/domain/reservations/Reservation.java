@@ -21,7 +21,7 @@ public class Reservation {
     public Reservation(ReservationId reservationId, ReservationNumber reservationNumber, String nationalIdentityNumber, ReservationHolderName reservationHolderName, LocalDate openingDate) {
         Guard.guard(nationalIdentityNumber).againstNullOrWhitespace(ValidationMessages.NATIONAL_IDENTITY_NUMBER_EMPTY);
         Guard.guard(reservationId).againstNull(ValidationMessages.RESERVATION_ID_EMPTY);
-        guard(reservationNumber).againstNull(ValidationMessages.RESERVATION_NUMBER_EMPTY);
+        Guard.guard(reservationNumber).againstNull(ValidationMessages.RESERVATION_NUMBER_EMPTY);
         Guard.guard(reservationHolderName).againstNull(ValidationMessages.RESERVATION_HOLDER_NAME_EMPTY);
         Guard.guard(openingDate).againstNull(ValidationMessages.OPENING_DATE_EMPTY);
 
