@@ -39,13 +39,13 @@ public class ReservationRepositoryImpl implements ReservationRepository {
 
     @Override
     public Reservation findRequired(ReservationNumber reservationNumber) {
-        var optionalBankReservation = find(reservationNumber);
+        var optionalReservation = find(reservationNumber);
 
-        if (optionalBankReservation.isEmpty()) {
+        if (optionalReservation.isEmpty()) {
             throw new ValidationException(ValidationMessages.RESERVATION_NUMBER_NOT_EXIST);
         }
 
-        return optionalBankReservation.get();
+        return optionalReservation.get();
     }
 
     @Override

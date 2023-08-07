@@ -8,9 +8,9 @@ public interface ReservationRepository {
 
     Reservation findRequired(ReservationNumber reservationNumber);
 
-    void add(Reservation bankReservation);
+    void add(Reservation reservation);
 
-    void update(Reservation bankReservation);
+    void update(Reservation reservation);
 
     ReservationId nextReservationId();
 

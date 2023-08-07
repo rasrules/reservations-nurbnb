@@ -1,6 +1,6 @@
 {
-  "id": "banking-kata",
-  "realm": "banking-kata",
+  "id": "reservations",
+  "realm": "reservations",
   "notBefore": 0,
   "defaultSignatureAlgorithm": "RS256",
   "revokeRefreshToken": false,
@@ -51,12 +51,12 @@
         "description": "${role_uma_authorization}",
         "composite": false,
         "clientRole": false,
-        "containerId": "banking-kata",
+        "containerId": "reservations",
         "attributes": {}
       },
       {
         "id": "7ec6d7df-1f75-4e80-a6f2-b520d13596ba",
-        "name": "default-roles-banking_kata",
+        "name": "default-roles-reservations",
         "description": "${role_default-roles}",
         "composite": true,
         "composites": {
@@ -72,7 +72,7 @@
           }
         },
         "clientRole": false,
-        "containerId": "banking-kata",
+        "containerId": "reservations",
         "attributes": {}
       },
       {
@@ -81,7 +81,7 @@
         "description": "${role_offline-access}",
         "composite": false,
         "clientRole": false,
-        "containerId": "banking-kata",
+        "containerId": "reservations",
         "attributes": {}
       }
     ],
@@ -397,11 +397,11 @@
   "groups": [],
   "defaultRole": {
     "id": "7ec6d7df-1f75-4e80-a6f2-b520d13596ba",
-    "name": "default-roles-banking_kata",
+    "name": "default-roles-reservations",
     "description": "${role_default-roles}",
     "composite": true,
     "clientRole": false,
-    "containerId": "banking-kata"
+    "containerId": "reservations"
   },
   "requiredCredentials": [
     "password"
@@ -452,7 +452,7 @@
       "disableableCredentialTypes": [],
       "requiredActions": [],
       "realmRoles": [
-        "default-roles-banking_kata"
+        "default-roles-reservations"
       ],
       "notBefore": 0,
       "groups": []
@@ -482,13 +482,13 @@
       "clientId": "account",
       "name": "${client_account}",
       "rootUrl": "${authBaseUrl}",
-      "baseUrl": "/realms/banking-kata/account/",
+      "baseUrl": "/realms/reservations/account/",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "redirectUris": [
-        "/realms/banking-kata/account/*"
+        "/realms/reservations/account/*"
       ],
       "webOrigins": [],
       "notBefore": 0,
@@ -513,13 +513,13 @@
       "clientId": "account-console",
       "name": "${client_account-console}",
       "rootUrl": "${authBaseUrl}",
-      "baseUrl": "/realms/banking-kata/account/",
+      "baseUrl": "/realms/reservations/account/",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "redirectUris": [
-        "/realms/banking-kata/account/*"
+        "/realms/reservations/account/*"
       ],
       "webOrigins": [],
       "notBefore": 0,
@@ -637,13 +637,13 @@
       "clientId": "security-admin-console",
       "name": "${client_security-admin-console}",
       "rootUrl": "${authAdminUrl}",
-      "baseUrl": "/admin/banking-kata/console/",
+      "baseUrl": "/admin/reservations/console/",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "redirectUris": [
-        "/admin/banking-kata/console/*"
+        "/admin/reservations/console/*"
       ],
       "webOrigins": [
         "+"

@@ -3,7 +3,7 @@ package com.nurbnb.reservation.core.internal.cleanarch.domain.reservations;
 import java.time.LocalDate;
 
 public class ReservationBuilder {
-    public static ReservationBuilder bankReservation() {
+    public static ReservationBuilder reservation() {
         return new ReservationBuilder();
     }
     private ReservationId reservationId;

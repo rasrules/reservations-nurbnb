@@ -28,7 +28,7 @@
 
   "queues": [
     {
-      "name": "default-bankingkata-queue",
+      "name": "default-reservations-queue",
       "vhost": "/",
       "durable": true,
       "auto_delete": false,
@@ -39,7 +39,7 @@
   ],
   "exchanges": [
     {
-      "name": "default-bankingkata-exchange",
+      "name": "default-reservations-exchange",
       "vhost": "/",
       "type": "direct",
       "durable": true,
@@ -50,11 +50,11 @@
   ],
   "bindings": [
     {
-      "source": "default-bankingkata-exchange",
+      "source": "default-reservations-exchange",
       "vhost": "/",
-      "destination": "default-bankingkata-queue",
+      "destination": "default-reservations-queue",
       "destination_type": "queue",
-      "routing_key": "default-bankingkata-queue",
+      "routing_key": "default-reservations-queue",
       "arguments": {}
     }
   ]

@@ -1,8 +1,8 @@
 
 default:
   exchange:
-    name: default-bankingkata-exchange
+    name: default-reservations-exchange
   queue:
-    name: default-bankingkata-queue
+    name: default-reservations-queue
   routingkey:
-    name: default-bankingkata-queue
+    name: default-reservations-queue

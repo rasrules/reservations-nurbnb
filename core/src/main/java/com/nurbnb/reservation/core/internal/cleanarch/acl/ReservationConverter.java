@@ -14,13 +14,13 @@ public class ReservationConverter {
         return new Reservation(reservationId, reservationNumber, nationalIdentityNumber, reservationHolderName, openingDate);
     }
 
-    public static ReservationDto toDto(Reservation bankReservation) {
-        var reservationId = bankReservation.getReservationId().toLong();
-        var reservationNumber = bankReservation.getReservationNumber().toString();
-        var nationalIdentityNumber = bankReservation.getNationalIdentityNumber();
-        var firstName = bankReservation.getReservationHolderName().firstName().toString();
-        var lastName = bankReservation.getReservationHolderName().lastName().toString();
-        var openingDate = bankReservation.getOpeningDate();
+    public static ReservationDto toDto(Reservation reservation) {
+        var reservationId = reservation.getReservationId().toLong();
+        var reservationNumber = reservation.getReservationNumber().toString();
+        var nationalIdentityNumber = reservation.getNationalIdentityNumber();
+        var firstName = reservation.getReservationHolderName().firstName().toString();
+        var lastName = reservation.getReservationHolderName().lastName().toString();
+        var openingDate = reservation.getOpeningDate();
 
         var dto = new ReservationDto();
         dto.setReservationId(reservationId);
