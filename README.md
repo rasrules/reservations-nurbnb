@@ -22,4 +22,4 @@ We implement a Reservation system with the following use cases:
 <img src="https://drive.google.com/uc?export=download&id=1DG30d4TZcNeM7TMVlu3ibXNYlWoV4bE1" />
 
 ## Architecture
-<!-- [YouTube Explanation](https://www.youtube.com/watch?v=XXX) -->
+[YouTube Explanation](https://www.youtube.com/watch?v=EYFmbhR85nc)
