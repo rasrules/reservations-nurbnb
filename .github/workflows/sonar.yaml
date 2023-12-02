@@ -46,6 +46,6 @@ jobs:
           REDIS_HOST: localhost
           REDIS_PORT: 6379
           REDIS_PASSWORD: b4EA2xC6LlKnlizPu9bwRRrQM
-        run: 
+        run: |
           sudo chmod +x ./gradlew
           ./gradlew build sonar --info -Dsonar.login=$SONAR_TOKEN
