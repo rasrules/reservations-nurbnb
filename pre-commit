@@ -1,4 +1,4 @@
 #!/bin/sh
 
 echo "*****Running linter******"
-docker-compose -f docker-compose.dist.yml run --rm reservations-app --entrypoint=./gradlew clean build spotlessCheck
+docker-compose -f docker-compose.yml run --rm reservations-app --entrypoint=./gradlew clean build spotlessCheck
