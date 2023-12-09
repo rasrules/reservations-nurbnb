@@ -50,8 +50,8 @@ subprojects {
             apply plugin: "org.flywaydb.flyway"
             implementation 'org.flywaydb:flyway-core:8.1.0'
         }
-        implementation("com.diffplug.spotless:spotless-lib:${spotlessLibVersion}")
-        implementation("com.diffplug.spotless:spotless-plugin-gradle:${spotlessVersion}")
+        implementation("com.diffplug.spotless:spotless-lib")
+        implementation("com.diffplug.spotless:spotless-plugin-gradle")
     }
 
     sonarqube {
