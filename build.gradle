@@ -50,6 +50,8 @@ subprojects {
             apply plugin: "org.flywaydb.flyway"
             implementation 'org.flywaydb:flyway-core:8.1.0'
         }
+        implementation("com.diffplug.spotless:spotless-lib:${spotlessLibVersion}")
+        implementation("com.diffplug.spotless:spotless-plugin-gradle:${spotlessVersion}")
     }
 
     sonarqube {
@@ -58,6 +60,20 @@ subprojects {
             property "sonar.test.inclusions", "src/test"
             property "sonar.jacoco.coverage.reportPaths", "$buildDir/reports/jacoco/jacocoTestReport/jacocoTestReport.xml"
             property "sonar.junit.reportsPaths", "$buildDir/test-results/"
+        }
+    }
+
+    spotless {
+        java {
+            target fileTree('.') {
+                include '**/*.java'
+                exclude '**/build/**', '**/build-*/**'
+            }
+            toggleOffOn()
+            palantirJavaFormat()
+            removeUnusedImports()
+            trimTrailingWhitespace()
+            endWithNewline()
         }
     }
 
@@ -168,6 +184,8 @@ task installLocalGitHook(type: Copy) {
 }
 
 build.dependsOn installLocalGitHook
+
+
 
 bootJar {
     enabled = false
